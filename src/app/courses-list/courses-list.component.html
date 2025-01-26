@@ -4,9 +4,9 @@
     <p>{{ courses[0].description }}</p>
     <p>{{ courses[0].price }}</p>
     <p>{{ courses[0].date }}</p>
-    <p [hidden]="!courses[0].soldOut">Sold out</p>
+    <p [hidden]="!courses[1].soldOut">Sold out</p>
     <img [src]="courses[0].img" [alt]="courses[0].title" width="100">
-    <button>View details</button>
+    <button (click)="viewDetails(courses[0].title)">View details</button>
 </div>
 <div class="course-item">
     <h3>{{ courses[1].title }}</h3>
@@ -15,5 +15,5 @@
     <p>{{ courses[1].date }}</p>
     <p [hidden]="!courses[1].soldOut">Sold out</p>
     <img [src]="courses[1].img" [alt]="courses[1].title" width="100">
-    <button>View details</button>
+    <button (click)="viewDetails(courses[1].title)">View details</button>
 </div>
