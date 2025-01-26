@@ -4,6 +4,8 @@
     <p>{{ courses[0].description }}</p>
     <p>{{ courses[0].price }}</p>
     <p>{{ courses[0].date }}</p>
+    <p [hidden]="!courses[0].soldOut">Sold out</p>
+    <img [src]="courses[0].img" [alt]="courses[0].title" width="100">
     <button>View details</button>
 </div>
 <div class="course-item">
@@ -11,5 +13,7 @@
     <p>{{ courses[1].description }}</p>
     <p>{{ courses[1].price }}</p>
     <p>{{ courses[1].date }}</p>
+    <p [hidden]="!courses[1].soldOut">Sold out</p>
+    <img [src]="courses[1].img" [alt]="courses[1].title" width="100">
     <button>View details</button>
 </div>
