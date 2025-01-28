@@ -3,8 +3,8 @@
 <div class="course-item">
     <h3>{{ course.title }}</h3>
     <p>{{ course.description }}</p>
-    <p>{{ course.price }}</p>
-    <p>{{ course.date }}</p>
+    <p>{{ course.price | currency:'USD' }}</p>
+    <p>{{ course.date | date:'longDate' }}</p>
     <p [hidden]="!courses[1].soldOut">Sold out</p>
     <img [src]="course.img" [alt]="course.title" width="100">
     @if (course.price < 50) {
