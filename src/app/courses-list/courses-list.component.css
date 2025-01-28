@@ -10,6 +10,11 @@ h3 {
     margin: 0 0 0.5rem 0;
 }
 
+.special-offer {
+    color: #007e24;
+    font-weight: bold;
+}
+
 button {
     background-color: #007bff;
     color: white;
