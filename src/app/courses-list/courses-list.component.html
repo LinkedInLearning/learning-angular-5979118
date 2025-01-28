@@ -10,6 +10,9 @@
     @if (course.price < 50) {
         <div class="special-offer">Special Offer!</div>
     }
+    @if (course.onSale) {
+        <div class="sale-banner">On Sale!</div>
+    }
     <button (click)="viewDetails(course.title)">View details</button>
 </div>
 }
