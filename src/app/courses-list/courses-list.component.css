@@ -2,6 +2,28 @@ h3 {
     margin: 0 0 0.5rem 0;
 }
 
+.wishlist-banner {
+    background-color: #ffeef0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* space between items */
+}
+
+.heart {
+    font-size: 1.2rem;
+    color: #e53935;
+    /* or any color you like */
+}
+
+.wishlist-item {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
 button {
     background-color: #007bff;
     color: white;
