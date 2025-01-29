@@ -19,5 +19,10 @@ export class CoursesListComponent implements OnInit {
     console.log("CoursesList initialized!")
   }
 
+  onCourseBooked(course: any): void {
+    console.log('Parent heard about booking:', course.title);
+    // Potentially do more here in the future
+  }
+
  
 }
