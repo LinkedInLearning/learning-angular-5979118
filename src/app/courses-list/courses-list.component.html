@@ -1,18 +1,4 @@
 <h2>{{ title }}</h2>
 @for(course of courses; track course.id) {
-<div class="course-item">
-    <h3>{{ course.title }}</h3>
-    <p>{{ course.description }}</p>
-    <p>{{ course.price | currency:'USD' }}</p>
-    <p>{{ course.date | date:'longDate' }}</p>
-    <p [hidden]="!courses[1].soldOut">Sold out</p>
-    <img [src]="course.img" [alt]="course.title" width="100">
-    @if (course.price < 50) {
-        <div class="special-offer">Special Offer!</div>
-    }
-    @if (course.onSale) {
-        <div class="sale-banner">On Sale!</div>
-    }
-    <button (click)="viewDetails(course.title)">View details</button>
-</div>
+<app-course-card [course]="course"></app-course-card>
 }

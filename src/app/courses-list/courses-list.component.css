@@ -1,24 +1,5 @@
-.course-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-}
-
 h3 {
     margin: 0 0 0.5rem 0;
-}
-
-.special-offer {
-    color: #007e24;
-    font-weight: bold;
-}
-
-.sale-banner {
-    color: #fff;
-    font-weight: bold;
-    background-color: #007e24;
 }
 
 button {
