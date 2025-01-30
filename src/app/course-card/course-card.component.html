@@ -1,3 +1,4 @@
+@if(course) {
 <div class="course-card">
     <img [src]="course.img" [alt]="course.title" width="100">
     <h3>{{ course.title }}</h3>
@@ -14,3 +15,4 @@
     <button (click)="onAddToWishlist()">Add to Wishlist</button>
     <button [disabled]="course.soldOut" (click)="onCourseBooked()">Book course</button>
 </div>
+}
