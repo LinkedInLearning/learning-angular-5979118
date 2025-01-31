@@ -1,33 +1,50 @@
 {
-    "courses": [
-        {
-            "id": 1,
-            "title": "Intro to Angular",
-            "description": "Learn Angular basics",
-            "price": 49,
-            "date": "2025-03-01",
-            "img": "angular-logo.png",
-            "soldOut": false
-        },
-        {
-            "id": 2,
-            "title": "Advanced Angular",
-            "description": "Deep dive into Angular",
-            "price": 99,
-            "date": "2025-04-10",
-            "img": "angular-logo.png",
-            "soldOut": true
-        },
-        {
-            "id": 3,
-            "title": "RxJS Fundamentals",
-            "description": "Asynchronous data streams",
-            "price": 45,
-            "onSale": true,
-            "date": "2025-05-05",
-            "img": "rxjs-logo.png",
-            "soldOut": false
-        }
-    ],
-    "students": []
+  "courses": [
+    {
+      "id": 1,
+      "title": "Intro to Angular",
+      "description": "Learn Angular basics",
+      "price": 49,
+      "date": "2025-03-01",
+      "img": "angular-logo.png",
+      "soldOut": false
+    },
+    {
+      "id": 2,
+      "title": "Advanced Angular",
+      "description": "Deep dive into Angular",
+      "price": 99,
+      "date": "2025-04-10",
+      "img": "angular-logo.png",
+      "soldOut": true
+    },
+    {
+      "id": 3,
+      "title": "RxJS Fundamentals",
+      "description": "Asynchronous data streams",
+      "price": 45,
+      "onSale": true,
+      "date": "2025-05-05",
+      "img": "rxjs-logo.png",
+      "soldOut": false
+    }
+  ],
+  "students": [
+    {
+      "id": 1738352559023,
+      "name": "Maaike",
+      "email": "maaikejvp@gmail.com",
+      "enrolledCourseIds": [
+        "2"
+      ]
+    },
+    {
+      "id": 1738352787527,
+      "name": "Maaike",
+      "email": "maaikejvp@gmail.com",
+      "enrolledCourseIds": [
+        "3"
+      ]
+    }
+  ]
 }

@@ -84,8 +84,6 @@ app.post('/students', (req, res) => {
     const newStudent = req.body;
     // Simple ID generation
     newStudent.id = Date.now();
-    // Initialize enrolledCourses if not present
-    newStudent.enrolledCourses = [];
     data.students.push(newStudent);
     saveData(data);
     res.status(201).json(newStudent);

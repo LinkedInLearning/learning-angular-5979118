@@ -1,6 +1,6 @@
 <h2>Sign up for a course!</h2>
 
-<form [formGroup]="signUpForm">
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="name">Name:</label>
         <input id="name" type="texzt" formControlName="name" />
@@ -47,5 +47,17 @@
         </div>
         }
     </div>
-    <button type="submit">Sign up</button>
+    <button type="submit" [disabled]="signUpForm.invalid">Sign up</button>
+    @if(submissionSuccess) {
+    <div class="success">
+        <p>Thank you for signing up! We will contact you soon.</p>
+    </div>
+    }
+
+    @if(submissionError) {
+    <div class="error">
+        <p>{{ submissionError }}</p>
+    </div>
+    }
+
 </form>
