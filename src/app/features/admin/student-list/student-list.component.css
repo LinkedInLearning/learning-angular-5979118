@@ -1,0 +1,32 @@
+/* src/app/features/admin/student-list/student-list.component.css */
+
+h2 {
+    color: #0072b1;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.error {
+    color: #e53935;
+    font-size: 0.875rem;
+}

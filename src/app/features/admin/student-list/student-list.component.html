@@ -1,0 +1,43 @@
+<h2>All Students</h2>
+
+@if (loading) {
+<p>Loading students...</p>
+}
+
+@if (errorMessage) {
+<div class="error">
+    <p>{{ errorMessage }}</p>
+</div>
+}
+
+@if (!loading && !errorMessage) {
+@if (students.length > 0) {
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Enrolled Courses</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (student of students; track student.id) {
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.email }}</td>
+            <td>
+                @for (courseId of student.enrolledCourseIds; track courseId) {
+                {{ getCourseTitle(courseId) }}<br />
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+@else {
+<p>No students found.</p>
+}
+}
