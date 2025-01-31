@@ -1,0 +1,24 @@
+<h2>Sign up for a course!</h2>
+
+<form [formGroup]="signUpForm">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" type="texzt" formControlName="name" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email" />
+    </div>
+    <div class="form-group">
+        <label for="name">Enroll in:</label>
+        <select id="enrolledCourseId" formControlName="enrolledCourseId">
+            <option value="" disabled>Select a course</option>
+            @for(course of courses; track course.id) {
+            <option [value]="course.id">
+                {{ course.title }}
+            </option>
+            }
+        </select>
+    </div>
+    <button type="submit">Sign up</button>
+</form>
