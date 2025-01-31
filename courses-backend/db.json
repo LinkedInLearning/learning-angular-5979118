@@ -27,6 +27,16 @@
       "date": "2025-05-05",
       "img": "rxjs-logo.png",
       "soldOut": false
+    },
+    {
+      "id": 1738353527361,
+      "title": "RxJs Advanced",
+      "description": "More async data streaming",
+      "price": 100,
+      "date": "2025-04-01",
+      "img": "rxjs-logo.png",
+      "onSale": false,
+      "soldOut": false
     }
   ],
   "students": [

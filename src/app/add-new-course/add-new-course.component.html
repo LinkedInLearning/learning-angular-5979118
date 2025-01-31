@@ -1,0 +1,101 @@
+<!-- add-new-course.component.html -->
+<h2>Add New Course</h2>
+
+<form [formGroup]="addCourseForm" (ngSubmit)="onSubmit()">
+    <!-- Title Field -->
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" type="text" formControlName="title" />
+        @if (title?.invalid && (title?.dirty || title?.touched)) {
+        <div class="error">
+            @if (title?.errors?.['required']) {
+            <small>Title is required.</small>
+            }
+            @if (title?.errors?.['minlength']) {
+            <small>Title must be at least 3 characters long.</small>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description"></textarea>
+        @if (description?.invalid && (description?.dirty || description?.touched)) {
+        <div class="error">
+            @if (description?.errors?.['required']) {
+            <small>Description is required.</small>
+            }
+            @if (description?.errors?.['minlength']) {
+            <small>Description must be at least 10 characters long.</small>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Price Field -->
+    <div class="form-group">
+        <label for="price">Price ($):</label>
+        <input id="price" type="number" formControlName="price" />
+        @if (price?.invalid && (price?.dirty || price?.touched)) {
+        <div class="error">
+            @if (price?.errors?.['required']) {
+            <small>Price is required.</small>
+            }
+            @if (price?.errors?.['min']) {
+            <small>Price cannot be negative.</small>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Date Field -->
+    <div class="form-group">
+        <label for="date">Course Date:</label>
+        <input id="date" type="date" formControlName="date" />
+        @if (date?.invalid && (date?.dirty || date?.touched)) {
+        <div class="error">
+            @if (date?.errors?.['required']) {
+            <small>Course date is required.</small>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Image URL Field -->
+    <div class="form-group">
+        <label for="img">Image URL:</label>
+        <input id="img" type="text" formControlName="img" />
+        @if (img?.invalid && (img?.dirty || img?.touched)) {
+        <div class="error">
+            @if (img?.errors?.['required']) {
+            <small>Image URL is required.</small>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- On Sale Checkbox -->
+    <div class="form-group checkbox-group">
+        <label class="inline" for="onSale">On Sale</label>
+        <input id="onSale" type="checkbox" formControlName="onSale" />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="addCourseForm.invalid">Add Course</button>
+</form>
+
+<!-- Success Message -->
+@if (submissionSuccess) {
+<div class="success">
+    <p>Course successfully added!</p>
+</div>
+}
+
+<!-- Error Message -->
+@if (submissionError) {
+<div class="error">
+    <p>{{ submissionError }}</p>
+</div>
+}

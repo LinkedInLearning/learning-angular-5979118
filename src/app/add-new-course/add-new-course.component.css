@@ -1,0 +1,62 @@
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+} 
+
+label.inline {
+    display: inline;
+
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+input[type=checkbox] {
+    width: 10%;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.error {
+    color: #e53935;
+    font-size: 0.875rem;
+}
+
+button {
+    background-color: #0072b1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.success {
+    margin-top: 1rem;
+    color: #28a745;
+    font-weight: bold;
+}
